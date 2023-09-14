@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation Playground</title>
+    <style>
+      /* Add your global styles here */
+      #element1 {
+        /* Add element 1 animations here */
+        transition: background 4s, transform 1s 4s ease-out
+      }
+      #element1:hover{
+        background: greenyellow;
+        transform: rotateZ(90deg)
+      }
+
+      #element2 {
+        /* Add element 2 animations here */
+        transition: 0.5s
+      }
+      #element2:active{
+        transform: translateX(50px) rotateZ(20deg) 
+      }
+      #element3 {
+        /* Add element 3 animations here */
+        
+        animation-name: moveit;
+        animation-duration: 3s;
+        animation-fill-mode:both;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+        animation-timing-function:ease-in;
+      }
+      
+
+      .animated-element {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        margin: 20px;
+        display: inline-flex; /* Use flex to center text vertically */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        text-align: center; /* Center text horizontally */
+
+        /* You can add animation/transition code to all elements here */
+      }
+
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      @keyframes moveit{
+          from{ transform: scale(1)}
+          to{ transform: scale(2)}
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation Playground</h1>
+    <div class="animated-element" id="element1">Squish</div>
+
+    <div class="animated-element" id="element2">the</div>
+
+    <div class="animated-element" id="element3">Mosquitoes</div>
+
+    <!-- You can add more elements here -->
+
+    <script>
+      // JavaScript for adding interactivity (if needed)
+
+      // For example: if you want to add a class when an element gets clicked, use code similar to:
+      // const elementX = document.getElementById("elementX");
+      // elementX.addEventListener("click", () => {
+      // elementX.classList.toggle("clicked"); // Adds "clicked" class if it's not there, otherwise it removes it
+      // });
+    </script>
+  </body>
+</html>
