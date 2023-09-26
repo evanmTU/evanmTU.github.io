@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Loading Animation</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This centers vertically */
+        perspective: 1000px; /* Adjust the perspective depth */
+      }
+      .animated-element{
+          width:50px;
+          height:50px;
+          background-color:red;
+          animation: loading 16s ease-in-out 0s infinite;
+          position: absolute;
+          opacity:0%
+          
+      }
+      
+      @keyframes loading {
+        0% {
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+            opacity: 100%;
+            background-color: blue;
+        }
+        7.5% {
+            transform: translateX(100px) translateY(0px) rotate(90deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        12.5% {
+            transform: translateX(0px) translateY(0px) rotate(720deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        20% {
+            transform: translateX(0px) translateY(100px) rotate(810deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        25% {
+            transform: translateX(0px) translateY(0px) rotate(1440deg);
+            opacity: 100%;
+            background-color: red;
+        }
+        32.5% {
+            transform: translateX(-100px) translateY(0px) rotate(1530deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        37.5% {
+            transform: translateX(0px) translateY(0px) rotate(2160deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        45% {
+            transform: translateX(0px) translateY(-100px) rotate(2250deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        50% {
+            transform: translateX(0px) translateY(0px) rotate(2880deg);
+            opacity: 100%;
+            background-color: yellow;
+        }
+        57.5% {
+            transform: translateX(100px) translateY(0px) rotate(2970deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+
+        62.5% {
+            transform: translateX(0px) translateY(0px) rotate(3600deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+
+        70% {
+            transform: translateX(0px) translateY(100px) rotate(3690deg);
+            opacity: 100%;
+            background-color: green;
+        }
+
+        75% {
+            transform: translateX(0px) translateY(0px) rotate(4320deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+
+        82.5% {
+            transform: translateX(-100px) translateY(0px) rotate(4410deg);
+            opacity: 100%;
+            background-color: cyan;
+        }
+
+        87.5% {
+            transform: translateX(0px) translateY(0px) rotate(5040deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+
+        95% {
+            transform: translateX(0px) translateY(-100px) rotate(5130deg);
+            opacity: 100%;
+            //background-color: blue;
+        }
+        100% {
+            transform: translateX(0px) translateY(0px) rotate(5760deg);
+            opacity: 100%;
+            background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Loading Animation</h1>
+    <div class="container">
+        <div class="animated-element">
+        </div>
+    </div>
+  </body>
+</html>
